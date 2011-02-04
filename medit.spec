@@ -9,7 +9,7 @@ Version:	0.9.3
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Editors
-Source0:	http://dl.sourceforge.net/mooedit/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/mooedit/%{name}-%{version}.tar.bz2
 # Source0-md5:	24ffe177248e94795345a11a1a668741
 URL:		http://mooedit.sourceforge.net/
 BuildRequires:	gtk+2-devel >= 2:2.2.0
@@ -19,6 +19,8 @@ BuildRequires:	pcre-devel
 BuildRequires:	python-pygtk-devel
 BuildRequires:	rpmbuild(find_lang) >= 1.32
 BuildRequires:	rpmbuild(macros) >= 1.197
+Requires(post,postun):	gtk-update-icon-cache
+Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
